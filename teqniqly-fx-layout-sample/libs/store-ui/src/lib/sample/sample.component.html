@@ -1,0 +1,11 @@
+<div class="parent" 
+  fxLayout="row"
+  fxLayout.lt-md="column">
+    <div fxFlex="20%" class="left">Left</div>
+    <div fxFlex="80%" class="right" *ngIf="!this.mo.isActive('xs')">Right</div>
+    <div fxFlex="80%" class="right" *ngIf="this.mo.isActive('xs')">Only shown on xs screens</div>
+</div>
+
+<span *ngIf="showExtras$ | async">
+  Showing extra info on medium and larger screens
+</span>
