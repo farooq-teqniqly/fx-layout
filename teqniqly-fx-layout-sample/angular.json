@@ -120,6 +120,37 @@
           }
         }
       }
+    },
+    "store-ui": {
+      "projectType": "library",
+      "root": "libs/store-ui",
+      "sourceRoot": "libs/store-ui/src",
+      "prefix": "teqniqly-fx-layout-sample",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/store-ui/tsconfig.lib.json",
+              "libs/store-ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/store-ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/store-ui/jest.config.js",
+            "tsConfig": "libs/store-ui/tsconfig.spec.json",
+            "setupFile": "libs/store-ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

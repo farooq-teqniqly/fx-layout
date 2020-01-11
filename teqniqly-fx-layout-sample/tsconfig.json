@@ -15,7 +15,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@teqniqly-fx-layout-sample/store-ui": ["libs/store-ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
