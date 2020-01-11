@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "teqniqlyFxLayoutSample",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "teqniqly-fx-layout-sample",
+      "kebab-case"
+    ]
+  }
+}
